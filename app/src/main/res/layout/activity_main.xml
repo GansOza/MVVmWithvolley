@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout >
+    <data>
+        <variable
+            name="presenter"
+            type="anew.gans.mvvmwithvolley.presenter.PresenterFun"/>
+
+        </data>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <ListView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/listview"
+       android:dividerHeight="5dp">
+
+   </ListView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load data"
+        android:onClick="@{(v)->presenter.getJSONData()}"
+        android:layout_below="@id/listview"/>
+</RelativeLayout>
+</layout>

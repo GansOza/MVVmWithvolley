@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout>
+
+    <data class = "UserModelBinding" >
+        <variable
+            name="usermodel"
+            type="anew.gans.mvvmwithvolley.viewmodel.UserModel"
+            />
+
+    </data>
+
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/fname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="13dp"
+        android:text="@{usermodel.firstName}" />
+
+    <TextView
+        android:id="@+id/lname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/fname"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="44dp"
+        android:text="@{usermodel.lastname}"
+        android:layout_alignRight="@+id/fname" />
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/fname"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="77dp"
+        android:text="@{usermodel.age}"
+        android:layout_alignRight="@+id/fname" />
+</RelativeLayout>
+</layout>
